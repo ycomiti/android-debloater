@@ -18,7 +18,11 @@ A pure Java Android Debloater.
 
 ## 📸 Screenshots
 
-_Coming soon..._
+![image](https://github.com/user-attachments/assets/f603efd9-0dbc-46d0-838b-c2daaec3d342)
+![image](https://github.com/user-attachments/assets/b286e887-93f1-46bf-ba9d-01d68c8f5623)
+
+
+
 
 ---
 
