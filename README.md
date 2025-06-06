@@ -30,12 +30,12 @@ _Coming soon..._
 ---
 
 ## ❗️ Supported Platforms
-Your host system (the computer running this debloater) must be compatible with Google's official ADB platform-tools. Below is a list of supported platforms and download links:
+Your host system (the computer running this debloater) must be compatible with Google's official ADB platform-tools.
 
-Platform	Architectures	Notes	Download
-Windows	x86 / x64	No installation required	[Download](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
-macOS	Intel (x86_64) & Apple Silicon (via Rosetta)	[Works natively or via Rosetta 2](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip)
-Linux	x86_64	May require udev rules for USB access	[Download](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
+Below is a list of supported platforms and download links:
+Windows	x86 / x64	No installation required	[Download](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)<br/>
+macOS	Intel (x86_64) & Apple Silicon (via Rosetta) [Download](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip)<br/>
+Linux	x86_64	May require udev rules for USB access	[Download](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)<br/>
 
 Other platforms like ARM-based Linux (e.g., Raspberry Pi) or BSD systems are not officially supported by Google’s ADB binaries.
 
@@ -45,8 +45,8 @@ Other platforms like ARM-based Linux (e.g., Raspberry Pi) or BSD systems are not
 
 Download the latest release from the [GitHub Releases](https://github.com/ycomiti/android-debloater/releases) page.
 
-No installation is required on Windows as far i know.
-On Linux, you may need to set up udev rules. (Mac support is untested.)
+No installation is required on Windows as far i know.<br/>
+On Linux, you may need to set up udev rules. (Mac support is untested.)<br/>
 Just run the following command:
 
 ```bash
@@ -67,9 +67,9 @@ You can contribute by submitting pull requests or creating new issue reports.
 
 ## 🛡️ Disclaimer
 
-> This software modifies system components on your Android device.
-> Although most changes are reversible, there's always a small risk of soft-brick or bootloop.
-> Always back up your important data before proceeding.
+> This software modifies system components on your Android device.<br/>
+> Although most changes are reversible, there's always a small risk of soft-brick or bootloop.<br/>
+> Always back up your important data before proceeding.<br/>
 
 The author is not responsible for any damage caused by the use of this tool.
 
