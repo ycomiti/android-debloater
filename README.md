@@ -33,7 +33,7 @@ _Coming soon..._
 Your host system (the computer running this debloater) must be compatible with Google's official ADB platform-tools. Below is a list of supported platforms and download links:
 
 Windows	x86 / x64	No installation required	[Download](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)<br/>
-macOS	Intel (x86_64) & Apple Silicon (via Rosetta)	[Works natively or via Rosetta 2](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip)<br/>
+macOS	Intel (x86_64) & Apple Silicon (via Rosetta) [Download](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip)<br/>
 Linux	x86_64	May require udev rules for USB access	[Download](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)<br/>
 
 Other platforms like ARM-based Linux (e.g., Raspberry Pi) or BSD systems are not officially supported by Google’s ADB binaries.
