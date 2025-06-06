@@ -45,7 +45,7 @@ import corsica.comiti.debloater.components.Frame;
 import corsica.comiti.debloater.constants.Links;
 import corsica.comiti.debloater.interfaces.ProcessListener;
 import corsica.comiti.debloater.utils.Debloater;
-import corsica.comiti.debloater.utils.MessageBox;
+import corsica.comiti.debloater.utils.Dialog;
 import corsica.comiti.debloater.utils.Theme;
 
 public class DebloaterFrame extends Frame implements ProcessListener, ActionListener {
@@ -295,8 +295,9 @@ public class DebloaterFrame extends Frame implements ProcessListener, ActionList
 					}
 					break;
 				case "load list":
-					File selectedFile = openFileDialog("Please select a debloat list file", "List Files (*.list)", "list");
+					File selectedFile = Dialog.openFileDialog("Please select a debloat list file", "List Files (*.list)", "list");
 					if (selectedFile == null) return;
+			        onOut("Selected file: %s", selectedFile.getAbsolutePath());
 					if (!selectedFile.canRead()) {
 						onErr("Unable to read the file %s: Permission denied", selectedFile.getName());
 						return;
@@ -328,27 +329,6 @@ public class DebloaterFrame extends Frame implements ProcessListener, ActionList
         }
 	}
 
-	private File openFileDialog(String title, String description, String... extensions) {
-		JFileChooser fileChooser = new JFileChooser();
-	    fileChooser.setDialogTitle(title);
-
-	    FileNameExtensionFilter filter = new FileNameExtensionFilter(description, extensions);
-	    fileChooser.setFileFilter(filter);
-
-	    int userSelection = fileChooser.showOpenDialog(null);
-
-	    if (userSelection == JFileChooser.APPROVE_OPTION) {
-	        File selectedFile = fileChooser.getSelectedFile();
-	        if (selectedFile.exists()) {
-		        onOut("Selected file: %s", selectedFile.getAbsolutePath());
-		        return selectedFile;
-	        }
-	    } else {
-	    	onOut("File selection cancelled.");
-	    }
-	    return null;
-	}
-
 	private void startDebloater(File file) {
 		if (!debloatWarn()) return;
 		try {
@@ -376,7 +356,7 @@ public class DebloaterFrame extends Frame implements ProcessListener, ActionList
 	}
 	
 	public boolean debloatWarn() {
-		boolean bool = MessageBox.warn("Are you sure you want to continue?%n" +
+		boolean bool = Dialog.warn("Are you sure you want to continue?%n" +
 									   "This action is usually reversible with a factory reset, but it may cause a soft-brick on some devices.%n" +
 									   "Make sure you have backed up your important data before proceeding.");
 		if (!bool) onOut("Debloat operation canceled by the user.");

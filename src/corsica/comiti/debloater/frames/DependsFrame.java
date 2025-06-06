@@ -18,7 +18,7 @@ import javax.swing.SwingUtilities;
 import corsica.comiti.debloater.enums.OS;
 import corsica.comiti.debloater.interfaces.ProcessListener;
 import corsica.comiti.debloater.utils.HTTPClient;
-import corsica.comiti.debloater.utils.MessageBox;
+import corsica.comiti.debloater.utils.Dialog;
 import corsica.comiti.debloater.utils.ZipUtils;
 
 public class DependsFrame extends Frame implements ProcessListener {
@@ -144,7 +144,7 @@ public class DependsFrame extends Frame implements ProcessListener {
     public void onErr(String err, Object... args) {
         String message = String.format(err, args);
         if (Desktop.isDesktopSupported()) {
-            MessageBox.error(message);
+            Dialog.error(message);
         }
         System.err.print(message);
     }
