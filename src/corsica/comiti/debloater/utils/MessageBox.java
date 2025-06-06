@@ -7,7 +7,7 @@ public final class MessageBox {
     private MessageBox() {}
 
     private static String formatMessage(final String message, final Object... args) {
-        return (args == null || args.length == 0 ? message : String.format(message, args));
+        return (args == null ? message : String.format(message, args));
     }
 
     private static int showConfirmDialog(final String message, final String title, final int optionType, final int messageType) {

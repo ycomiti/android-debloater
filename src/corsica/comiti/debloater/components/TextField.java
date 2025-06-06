@@ -1,10 +1,13 @@
 package corsica.comiti.debloater.components;
 
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JTextField;
 
 import corsica.comiti.debloater.utils.Theme;
-
-import java.awt.*;
 
 public class TextField extends JTextField {
 
